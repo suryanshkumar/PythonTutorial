@@ -1,4 +1,4 @@
-#how to use beak and continue in python
+#how to use break
 
 number = 20
 
@@ -8,3 +8,13 @@ for x in range(100):
         break
     else:
         print ("searching ...")
+
+
+#how to use continue
+numberList = [5, 10, 15]
+
+for x in range(20):
+    if x in numberList:
+        continue
+    else:
+        print (x, "Not in the numberList")
