@@ -1,5 +1,4 @@
 # PythonTutorial
 
-Author: Suryansh Kumar
-       PhD student, The Australian National University.
-       Department of engineering and computer science.
+Author: Suryansh Kumar, PhD student, The Australian National University.
+        Department of Engineering and Computer Science.
