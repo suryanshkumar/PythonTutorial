@@ -13,6 +13,15 @@ def addTwoNumbers(a, b):
     sum = a+b
     return sum
 
+#use function to pass any number of arguments
+
+def addNumbers(*args):
+    sum = 0
+    for s in args:
+        sum += s
+    return sum
+
+
 #call the function now
 a = 5
 b = 10
@@ -24,6 +33,9 @@ if sum < 20:
     print("It works!!!")
 
 
+#use the addtion for any number of arguments
+sum = addNumbers(1.4, 1.3, 7, 6, 5)
+print ("Total sum = " + str(sum))
 
 
 
