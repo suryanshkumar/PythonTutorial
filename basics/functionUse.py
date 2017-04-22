@@ -1,30 +1,27 @@
-#using function is python
+# using function is python
 '''
 def functionName():
 '''
 
-#use of function without use of return command
-def addTwoNumber(a, b):
-    sum = a + b
-    print ("The sum = " + str(sum))
 
-#use of function with return command
-def addTwoNumbers(a, b):
-    sum = a+b
-    return sum
+# 1. use of function without use of return command
+def addTwoNumber1(a, b):
+    s = a + b
+    print ("The sum = " + str(s))
 
-#call the function now
+
+# 2. use of function with return command
+def addTwoNumber2(a, b):
+    s = a + b
+    return s
+
+
+# call the function now
 a = 5
 b = 10
-addTwoNumber(a, b)
+addTwoNumber1(a, b)
 
-#use of return statement, take the return value and use if for other decisions
-sum = addTwoNumbers(a, b)
-if sum < 20:
+# 2. use of return statement, take the return value and use if for other decisions
+t = addTwoNumber2(a, b)
+if t < 20:
     print("It works!!!")
-
-
-
-
-
-
