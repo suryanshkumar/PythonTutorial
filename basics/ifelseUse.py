@@ -5,4 +5,12 @@ if age < 21:
 elif age == 27:
     print("There you go")
 else:
-    print("It upto you")
+    print("Its upto you")
+
+#with string as variable
+name = "john"
+
+if name is "john":
+    print("Yes it is")
+else:
+    print("Nope!")
