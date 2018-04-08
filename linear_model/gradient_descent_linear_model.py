@@ -46,7 +46,7 @@ for iter in range(100):
     er = er/N
     gr = gradient(x_data, y_data, w)
     w = w-eta*gr
-    if(er<1e-12):
+    if(er<1e-10):
         break
     w_set.append(w)
     e_set.append(er)
