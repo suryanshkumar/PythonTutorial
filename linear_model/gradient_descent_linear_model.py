@@ -40,15 +40,16 @@ N = np.size(x_data)
 #to find the optimal w, start with some guess on w say 1.0
 w = 1.0
 for iter in range(100):
+    er = 0.0
     for x, y in zip(x_data, y_data):
-        er = loss(x, y, w)
-    if(er<0.000001):
-        break
-    else:
+        er = er + loss(x, y, w)
         gr = gradient(x, y, w)
         w  = w-eta*gr
-        w_set.append(w)
-        e_set.append(er)
+    w_set.append(w)
+    e_set.append(er/N)
+    if(er<0.000001):
+        break
+
 
 print("optimal w = ", w, "loss=", er, "number of iteration = ",iter)
 
