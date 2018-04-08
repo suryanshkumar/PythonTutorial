@@ -1,4 +1,4 @@
-#Author: Suryansh Kumar
+#Author: Suryansh Kumar, Australian National University
 #Example to linearly model 2D dataset (x(input), y(output)).
 
 #import the necessary library
@@ -34,7 +34,7 @@ for w in np.arange(-1.0, 5, 0.1):
 
 #plot the error curve.
 plt.plot(w_set, e_set, 'r-')
-plt.xlabel('w (slope of line)')
+plt.xlabel('w (slope of the line)')
 plt.ylabel('mean square error')
 plt.title('Mean Squared Error Curve')
 plt.grid()
