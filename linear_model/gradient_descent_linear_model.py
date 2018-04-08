@@ -14,17 +14,17 @@ y_data = [2.0, 4.0, 6.0]
 
 #function to make a prediction
 def prediction(x, w):
-    return x*w
+    return np.dot(w, x)
 
 #function to calculate the loss
 def loss(x, y, w):
     y_predict = prediction(x, w)
-    error = (y-y_predict)*(y-y_predict)
+    error = np.dot(y-y_predict, y-y_predict)
     return error
 
 #function to estimate the gradient w.r.t to w. i.e argmin_w (x*w-y)^2
 def gradient(x, y, w):
-    grad = 2*x*(x*w-y)
+    grad = 2*np.dot((np.dot(w, x)-y), np.transpose(x))
     return grad
 
 #estimate the error for different values of slope (w) and store it in the list
@@ -39,17 +39,17 @@ N = np.size(x_data)
 
 #to find the optimal w, start with some guess on w say 1.0
 w = 1.0
-for iter in range(100):
-    er = 0.0
-    for x, y in zip(x_data, y_data):
-        er = er + loss(x, y, w)
-        gr = gradient(x, y, w)
-        w  = w-eta*gr
-    w_set.append(w)
-    e_set.append(er/N)
-    if(er<0.000001):
-        break
 
+
+for iter in range(100):
+    er = loss(x_data, y_data, w)
+    er = er/N
+    gr = gradient(x_data, y_data, w)
+    w = w-eta*gr
+    if(er<1e-12):
+        break
+    w_set.append(w)
+    e_set.append(er)
 
 print("optimal w = ", w, "loss=", er, "number of iteration = ",iter)
 
