@@ -54,7 +54,7 @@ for epoch in range(1000):
     optimizer.zero_grad() #reset the grad
     loss.backward()
 
-    #update the parameters
+    #4. update the parameters
     optimizer.step()
 
     #print the loss over epoch
