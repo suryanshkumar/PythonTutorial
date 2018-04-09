@@ -64,3 +64,8 @@ for epoch in range(1000):
 for parameters in model.parameters():
     if parameters.requires_grad:
         print(parameters.data[0])
+
+#predict the output on a test sample after Training
+test_val = 12;
+test_var = Variable(torch.Tensor([[test_val]]))
+print("predicted output for the test data " + str(test_val) + " is = ", model.forward(test_var).data[0][0])
