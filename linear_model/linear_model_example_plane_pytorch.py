@@ -13,8 +13,8 @@ from mpl_toolkits import mplot3d
 from torch.autograd import Variable
 
 #set the input data
-a = 1.0
-b = 2.0
+a = 2.0
+b = 4.0
 data = Variable(torch.Tensor([np.random.rand(10), np.random.rand(10)]), requires_grad= False)
 train = a*data[0, :] + b*data[1, :]
 
