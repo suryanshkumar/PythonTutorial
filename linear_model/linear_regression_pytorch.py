@@ -12,7 +12,6 @@
 #	3.4 update the parameters
 
 #import the library
-
 import torch
 import numpy as np
 from torch.autograd import Variable
